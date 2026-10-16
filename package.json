@@ -1,0 +1,15 @@
+{
+  "name": "lp-domburiya-by-hachimitsu",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Landing Page Oficial — Domburiya by Hachimitsu (Londrina/PR)",
+  "scripts": {
+    "dev": "vite --port 5173 --host",
+    "build": "vite build",
+    "preview": "vite preview --port 4173"
+  },
+  "devDependencies": {
+    "vite": "^6.2.0"
+  }
+}

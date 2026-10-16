@@ -1,0 +1,59 @@
+# Domburiya by Hachimitsu — Londrina/PR
+
+> Primeiro restaurante do grupo Hachimitsu, especializado na autêntica culinária quente do cotidiano japonês em Londrina/PR: Domburis (tigelas de arroz japonês com carnes e molhos clássicos), Lâmens artesanais, Karê Raisu (curry japonês), Obentôs executivos e porções tradicionais.
+
+## Dados Operacionais Oficiais (NAP)
+- **Nome Oficial:** Domburiya by Hachimitsu
+- **E-mail:** contato@domburiya.com.br
+- **Cardápio Digital & Delivery Próprio (Cloudfy):** https://domburiya.cloudfy.net.br/
+- **Plataformas de Delivery:** Cloudfy Delivery, iFood e Rappi (https://www.rappi.com.br/londrina/restaurantes/delivery/492417-domburiya-by-hachimitsu)
+- **Atendimento no Salão:** Pedido rápido via Totem de Autoatendimento.
+
+## Unidades em Londrina/PR
+
+### 1. Unidade Gleba Palhano (Alameda Jardino)
+- **Endereço:** Rua João Wyclif, 500, Galeria Alameda Jardino, Loja 4, Gleba Palhano, Londrina-PR, CEP 86050-450
+- **Telefone:** (43) 3326-6373
+- **Instagram:** https://www.instagram.com/domburiya/
+- **Modalidade de Serviço:** Somente À La Carte (não possui buffet self-service). Pedido no totem de autoatendimento no salão ou delivery.
+- **Horário de Funcionamento:** Segunda a Sábado, das 11h às 15h30 e das 17h às 22h. Domingo fechado.
+
+### 2. Unidade Centro
+- **Endereço:** Rua Pernambuco, 682, Centro, Londrina-PR, CEP 86020-120
+- **Telefone:** (43) 3027-4353
+- **Instagram:** https://www.instagram.com/domburiya.centro/
+- **Modalidade de Serviço:**
+  - **Buffet (Self-Service):** Segunda a Sábado, das 11h às 14h30.
+  - **À La Carte:** Segunda a Sábado, das 11h às 15h30 e das 17h às 22h.
+  - **Domingo:** Fechado.
+
+## Categorias e Pratos do Cardápio (24 Pratos Fotográficos)
+1. **Lámen (R$ 54,00):**
+   - Missô Lámen (Caldo tonkotsu, carne suína, naruto, cebolinha, ovo marinado)
+   - Shoyo Lámen (Caldo shoyu, frango, ovo, naruto, cebolinha, nori)
+   - Shio Lámen (Caldo de sal, manteiga, carne suína, milho, ovo, naruto, cebolinha, nori)
+   - Kara Missô Lámen (Caldo tonkotsu, pasta de pimenta la-yu, carne suína, naruto, cebolinha, ovo marinado)
+   - Tantan Lámen (Caldo tonkotsu, carne moída suína apimentada, repolho, ovo, naruto, cebolinha)
+2. **Domburi — Tigelas de Arroz Japonês (Opções P / G):**
+   - Gyudon (R$ 36,00 / R$ 46,00 — Arroz, carne bovina fatiada e cebola em molho de shoyu)
+   - Cheese Gyudon (R$ 39,00 / R$ 49,00 — Gyudon com queijo)
+   - Katsudon (R$ 43,00 / R$ 53,00 — Arroz, empanado suíno cozido com molho de shoyu, cebola e ovos)
+   - Gyutamagodon (R$ 50,00 / R$ 60,00 — Arroz, empanado bovino cozido com molho de shoyu, cebolas e ovos)
+   - Tonkatsudon (R$ 39,00 / R$ 49,00 — Arroz, empanado suíno frito com molho tarê)
+3. **Karê — Curry Japonês (Opções P / G):**
+   - Karê Raisu (R$ 40,00 / R$ 50,00 — Arroz e curry japonês)
+   - Karaguê Karê (R$ 54,00 / R$ 62,00 — Arroz, frango karaguê e curry japonês)
+   - Chicken Karê (R$ 56,00 / R$ 65,00 — Arroz, frango empanado frito e curry japonês)
+   - Katsu Karê (R$ 59,00 / R$ 69,00 — Arroz, empanado suíno frito e curry japonês)
+   - Gyu Katsu Karê (R$ 63,00 / R$ 70,00 — Arroz, empanado e curry japonês)
+4. **Obentô — Executivo Japonês Completo:**
+   - Obentô Karaguê (R$ 42,00 — Arroz com furikake, ameixa em conserva, yakissoba, omelete, frango karaguê)
+   - Obentô Katsu (R$ 46,00 — Arroz com furikake, ameixa em conserva, yakissoba, omelete, empanado suíno)
+   - Obentô Gyu Katsu (R$ 52,00 — Arroz com furikake, ameixa em conserva, yakissoba, omelete, empanado bovino)
+5. **Entradas & Porções:**
+   - Onigiri (R$ 12,00 — 2 unidades de bolinho de arroz com nori)
+   - Karaguê Porção (R$ 28,00 — Frango frito crocante oriental)
+   - Guioza (R$ 29,00 — Pastel de carne suína com legumes)
+   - Takoyaki (R$ 29,00 — Bolinha de massa com polvo, tarê, maionese, nori e gengibre)
+   - Hot Roll (R$ 31,00 — Com cream cheese e molho tarê)
+   - Tonkatsu Porção (R$ 32,00 — Empanado suíno frito e salada)
