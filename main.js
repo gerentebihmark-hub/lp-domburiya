@@ -163,17 +163,17 @@ function initBentoMenuFilter() {
    ========================================================================== */
 const REVIEWS = [
   {
-    img: '/assets/ambiente/avaliacao-cliente-lucas.webp',
+    img: '/assets/pratos/katsudon.webp',
     quote: '“Provei o Katsudon e o Cheese Gyudon: deliciosos, porção generosa e saem rapidinho no painel.”',
     author: 'Lucas D. · Alameda Jardino'
   },
   {
-    img: '/assets/ambiente/avaliacao-cliente-natalia.webp',
+    img: '/assets/pratos/obento-gyu-katsu.webp',
     quote: '“Os pratos estavam muito bem preparados e o tempero é bem suave. O atendimento também foi ótimo!”',
     author: 'Natália · Londrina/PR'
   },
   {
-    img: '/assets/ambiente/avaliacao-cliente-laisa.webp',
+    img: '/assets/pratos/karague-sweet-chili.webp',
     quote: '“Foi muito bom desde o atendimento via WhatsApp até pessoalmente. Tudo que experimentamos estava muito saboroso!”',
     author: 'Laisa Pizzo · Londrina/PR'
   }
