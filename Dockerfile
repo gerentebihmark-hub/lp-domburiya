@@ -19,6 +19,7 @@ RUN printf 'server {\n\
         add_header Cache-Control "public, immutable";\n\
     }\n\
     location / {\n\
+        add_header Cache-Control "no-cache, must-revalidate";\n\
         try_files $uri $uri/index.html $uri.html $uri/ /index.html;\n\
     }\n\
 }\n' > /etc/nginx/conf.d/default.conf
