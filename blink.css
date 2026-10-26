@@ -1,0 +1,911 @@
+/* ==========================================================================
+   DOMBURIYA BY HACHIMITSU — BLINK (LINK-IN-BIO)
+   Unidades: Gleba Palhano (/blinkgleba) · Centro (/blinkcentro) · Maringá (/blinkmaringa)
+   ========================================================================== */
+
+:root {
+  --red: #E83545;
+  --red-deep: #C82333;
+  --cream: #FBF6EE;
+  --dark: #141210;
+  --ink: #1C1714;
+  --gold: #FFDF00;
+  --ifood: #EA1D2C;
+
+  --font-sans: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-sketch: 'Shantell Sans', 'Caveat', cursive;
+  --font-hand: 'Caveat', cursive;
+
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body.blink-body {
+  font-family: var(--font-sans);
+  background-color: var(--cream);
+  color: #FFFFFF;
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 16px;
+  background: var(--dark);
+  color: var(--cream);
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 700;
+  z-index: 9999;
+}
+
+.skip-link:focus {
+  top: 16px;
+}
+
+/* ==========================================================================
+   1. PALCO DE FUNDO ESTILO HERO (75% VERMELHO + DERRETIDO EMBAIXO -> 25% CREME)
+   ========================================================================== */
+.blink-bg-stage {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: var(--cream);
+}
+
+.blink-bg-red-top {
+  position: relative;
+  width: 100%;
+  height: 75vh;
+  min-height: 540px;
+  background:
+    radial-gradient(circle at 25% 32%, rgba(255, 118, 96, 0.30) 0%, transparent 52%),
+    radial-gradient(circle at 78% 28%, rgba(255, 95, 75, 0.22) 0%, transparent 48%),
+    var(--red);
+  flex-shrink: 0;
+}
+
+.blink-liquid-melt {
+  position: relative;
+  width: 100%;
+  height: clamp(64px, 8vw, 124px);
+  color: var(--red);
+  margin-top: -2px;
+  z-index: 2;
+  flex-shrink: 0;
+  filter: drop-shadow(0 10px 18px rgba(20, 12, 10, 0.12));
+}
+
+.blink-liquid-melt svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.blink-bg-cream-bottom {
+  flex: 1;
+  width: 100%;
+  background: var(--cream);
+}
+
+/* ==========================================================================
+   2. PRATINHOS VOANDO NAS LATERAIS
+      - Lado Esquerdo: Frase institucional + 1 prato
+      - Lado Direito: 2 pratos voando (SEM escrita)
+   ========================================================================== */
+/* Pratinhos laterais desativados para manter o palco limpo e focado na coluna central */
+.blink-floating-plates {
+  display: none;
+}
+
+.side-plate-left {
+  position: absolute;
+  left: clamp(18px, 4vw, 72px);
+  top: 15%;
+  width: clamp(230px, 22vw, 320px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: floatPlateLeft 6.5s ease-in-out infinite;
+}
+
+.side-plate-right-top {
+  position: absolute;
+  right: clamp(20px, 4.5vw, 78px);
+  top: 9%;
+  width: clamp(190px, 18vw, 265px);
+  display: flex;
+  justify-content: center;
+  animation: floatPlateRightTop 7.2s ease-in-out infinite;
+}
+
+.side-plate-right-bottom {
+  position: absolute;
+  right: clamp(28px, 5vw, 88px);
+  top: 44%;
+  width: clamp(185px, 17vw, 255px);
+  display: flex;
+  justify-content: center;
+  animation: floatPlateRightBottom 6.8s ease-in-out infinite;
+}
+
+@keyframes floatPlateLeft {
+  0%, 100% { transform: translateY(0) rotate(-3deg); }
+  50% { transform: translateY(-14px) rotate(-1deg); }
+}
+
+@keyframes floatPlateRightTop {
+  0%, 100% { transform: translateY(0) rotate(4deg); }
+  50% { transform: translateY(-12px) rotate(1.5deg); }
+}
+
+@keyframes floatPlateRightBottom {
+  0%, 100% { transform: translateY(0) rotate(-3deg); }
+  50% { transform: translateY(-15px) rotate(-5deg); }
+}
+
+/* Escrita SOMENTE do lado esquerdo (Frase institucional, sem descrever prato) */
+.left-hero-phrase {
+  text-align: center;
+  color: #FFFFFF;
+  margin-bottom: 6px;
+  max-width: 280px;
+}
+
+.left-phrase-hand {
+  display: block;
+  font-family: var(--font-hand);
+  font-size: clamp(1.75rem, 2.3vw, 2.35rem);
+  font-weight: 700;
+  line-height: 1.04;
+  color: var(--gold);
+  text-shadow: 0 3px 12px rgba(20, 10, 10, 0.35);
+  transform: rotate(-2deg);
+}
+
+.left-scribble-line {
+  width: 170px;
+  height: 12px;
+  color: var(--gold);
+  margin: 4px auto 6px;
+  display: block;
+}
+
+.left-phrase-sub {
+  font-family: var(--font-sketch);
+  font-size: clamp(0.88rem, 1.05vw, 1rem);
+  font-weight: 700;
+  line-height: 1.28;
+  color: #FFFDF9;
+  text-shadow: 0 2px 10px rgba(20, 10, 10, 0.38);
+}
+
+.left-sketch-arrow {
+  width: 72px;
+  height: 44px;
+  color: var(--gold);
+  margin: 4px auto -6px;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.28));
+}
+
+.plate-cutout-img {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 28px 34px rgba(15, 8, 6, 0.45));
+  user-select: none;
+}
+
+@media (max-width: 1060px) {
+  .blink-floating-plates {
+    display: none;
+  }
+}
+
+/* ==========================================================================
+   3. CONTAINER CENTRAL DO BLINK (COLUNA BIO)
+   ========================================================================== */
+.blink-wrapper {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  max-width: 440px;
+  margin: 0 auto;
+  padding: 32px 16px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ==========================================================================
+   4. HEADER LIMPO (LOGO TRANSPARENTE SEM QUADRADO + TIPOGRAFIA DIRETA)
+   ========================================================================== */
+.blink-header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.blink-logo-img {
+  width: 255px;
+  max-width: 82%;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.28));
+  margin-bottom: 18px;
+  transition: transform 0.3s var(--ease-out);
+}
+
+.blink-logo-img:hover {
+  transform: scale(1.02);
+}
+
+.blink-unit-title {
+  font-size: 1.32rem;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--gold);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.32);
+  margin-bottom: 4px;
+}
+
+.blink-subtitle {
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.92);
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.25);
+}
+
+.blink-hours-status {
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.85);
+  margin-top: 4px;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* Divisor de seção sutil estilo BMK Blink */
+.blink-section-divider {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.blink-section-divider span {
+  font-size: 0.66rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.92);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+}
+
+.blink-section-divider .divider-line {
+  flex: 1;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.26);
+}
+
+/* ==========================================================================
+   5. BOTÕES DE AÇÃO (SEM QUADRADOS INTERNOS, SÍMBOLOS OFICIAIS PUROS)
+   ========================================================================== */
+.blink-links-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  width: 100%;
+  margin-bottom: 28px;
+}
+
+.blink-btn {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  padding: 15px 18px;
+  border-radius: 14px;
+  background: rgba(20, 16, 14, 0.72);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: #FFFFFF;
+  text-align: left;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
+  transition: transform 0.25s var(--ease-out), background-color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.blink-btn:hover {
+  transform: translateY(-2px);
+  background: rgba(20, 16, 14, 0.88);
+  border-color: rgba(255, 223, 0, 0.55);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.30);
+}
+
+.blink-btn:active {
+  transform: translateY(1px);
+}
+
+/* Símbolo Oficial Flutuando Limpo (Sem Quadrado em Volta) */
+.btn-symbol {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.25s var(--ease-out);
+}
+
+.blink-btn:hover .btn-symbol {
+  transform: scale(1.08);
+}
+
+.btn-symbol svg,
+.btn-symbol img {
+  width: 26px;
+  height: 26px;
+  display: block;
+  object-fit: contain;
+}
+
+.btn-copy {
+  flex: 1;
+  min-width: 0;
+}
+
+.btn-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  font-size: 0.96rem;
+  font-weight: 700;
+  line-height: 1.22;
+  color: #FFFFFF;
+}
+
+.btn-sub {
+  display: block;
+  font-size: 0.76rem;
+  font-weight: 500;
+  line-height: 1.32;
+  color: rgba(255, 255, 255, 0.76);
+  margin-top: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Seta Limpa sem Quadrado em Volta */
+.btn-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: rgba(255, 255, 255, 0.65);
+  transition: transform 0.25s var(--ease-out), color 0.25s ease;
+}
+
+.blink-btn:hover .btn-arrow {
+  transform: translate(2px, -2px);
+  color: var(--gold);
+}
+
+/* 1. Botão iFood (Vermelho Oficial iFood + Símbolo Oficial que Pisca) */
+.btn-ifood {
+  background: #EA1D2C;
+  border-color: rgba(255, 255, 255, 0.22);
+  box-shadow: 0 10px 26px rgba(140, 10, 20, 0.35);
+}
+
+.btn-ifood:hover {
+  background: #D81825;
+  border-color: rgba(255, 255, 255, 0.45);
+}
+
+.btn-ifood .btn-sub {
+  color: rgba(255, 240, 240, 0.92);
+}
+
+.btn-ifood .btn-arrow,
+.btn-ifood:hover .btn-arrow {
+  color: #FFFFFF;
+}
+
+.ifood-official-svg {
+  width: 28px !important;
+  height: 28px !important;
+  color: #FFFFFF;
+  overflow: visible;
+}
+
+.ifood-wink-eye {
+  transform-origin: 76% 28%;
+  transition: transform 0.18s ease;
+}
+
+/* Web: Pisca ao passar o mouse */
+@media (hover: hover) and (pointer: fine) {
+  .btn-ifood:hover .ifood-wink-eye,
+  .btn-ifood:focus-visible .ifood-wink-eye {
+    animation: eye-wink-web 0.42s ease-in-out;
+  }
+}
+
+@keyframes eye-wink-web {
+  0%, 100% { transform: scaleY(1); }
+  50% { transform: scaleY(0.12); }
+}
+
+/* Mobile: Pisca assim que abre a página */
+.btn-ifood.is-mobile-winking .ifood-wink-eye {
+  animation: eye-wink-mobile 2.6s ease-in-out 0.25s infinite;
+}
+
+@keyframes eye-wink-mobile {
+  0%, 12% { transform: scaleY(1); }
+  18%, 24% { transform: scaleY(0.12); }
+  30%, 38% { transform: scaleY(1); }
+  44%, 50% { transform: scaleY(0.12); }
+  58%, 100% { transform: scaleY(1); }
+}
+
+/* 2. Botão Site Domburiya (Vermelho DB + Símbolo Oficial DB Completo) */
+.btn-site-db {
+  background: linear-gradient(135deg, #D62332 0%, #A81623 100%);
+  border-color: rgba(255, 223, 0, 0.35);
+}
+
+.btn-site-db:hover {
+  background: linear-gradient(135deg, #E83545 0%, #B81B29 100%);
+  border-color: var(--gold);
+}
+
+.btn-site-db .btn-sub {
+  color: rgba(255, 248, 238, 0.90);
+}
+
+/* Estrelas na Avaliação Google */
+.review-stars-inline {
+  color: var(--gold);
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+}
+
+/* ==========================================================================
+   6. CARROSSEL COM 4 PRODUTOS PRINCIPAIS (LIMPO, SEM TAGS/QUADRADOS EXTRAS)
+   ========================================================================== */
+.blink-carousel-wrap {
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.carousel-card {
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  background: rgba(20, 16, 14, 0.82);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.26);
+}
+
+.carousel-viewport {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.4s var(--ease-out);
+  will-change: transform;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  flex: 0 0 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.slide-photo-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: #141210;
+}
+
+.slide-photo-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slide-body {
+  padding: 16px 18px 18px;
+  text-align: left;
+  color: #FFFFFF;
+}
+
+.slide-head-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.slide-dish-name {
+  font-size: 1.08rem;
+  font-weight: 800;
+  color: var(--gold);
+}
+
+.slide-dish-price {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.90);
+}
+
+.slide-dish-desc {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.80);
+  line-height: 1.42;
+}
+
+/* Navegação Limpa do Carrossel */
+.carousel-nav-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 18px 14px;
+}
+
+.carousel-arrow-btn {
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.75);
+  padding: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.carousel-arrow-btn:hover {
+  color: var(--gold);
+  transform: scale(1.12);
+}
+
+.carousel-bars {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.carousel-bar {
+  height: 4px;
+  width: 18px;
+  border-radius: 2px;
+  border: none;
+  background: rgba(255, 255, 255, 0.28);
+  transition: width 0.25s var(--ease-out), background-color 0.25s ease;
+  padding: 0;
+}
+
+.carousel-bar.is-active {
+  width: 32px;
+  background: var(--gold);
+}
+
+/* ==========================================================================
+   7. RODAPÉ FLUTUANTE (SEM CAIXA, FLUTUANDO DIRETO SOBRE O FUNDO)
+   ========================================================================== */
+.blink-footer-floating {
+  width: 100%;
+  margin-top: 16px;
+  padding: 20px 8px 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  border-top: 1px solid rgba(28, 23, 20, 0.14);
+  color: var(--ink);
+}
+
+.footer-legal-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+.footer-legal-link {
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--ink);
+  font-size: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  opacity: 0.78;
+  transition: opacity 0.2s ease, color 0.2s ease;
+}
+
+.footer-legal-link:hover {
+  opacity: 1;
+  color: var(--red);
+}
+
+.footer-dot {
+  opacity: 0.35;
+}
+
+.footer-security-text {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: rgba(28, 23, 20, 0.68);
+}
+
+.footer-security-text svg {
+  color: #15803D;
+  flex-shrink: 0;
+}
+
+.footer-bmk-floating {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 4px 0 2px;
+  opacity: 0.85;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.footer-bmk-floating:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+/* A logo branca da BMK recebe filtro escuro sutil para contrastar perfeitamente sobre o creme */
+.footer-bmk-logo {
+  height: 30px;
+  width: auto;
+  display: block;
+  filter: brightness(0) opacity(0.82);
+}
+
+.footer-copy-text {
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: rgba(28, 23, 20, 0.62);
+  line-height: 1.45;
+}
+
+/* ==========================================================================
+   8. MODAIS LEGAIS (<dialog>) & BANNER LGPD
+   ========================================================================== */
+.legal-dialog {
+  width: min(92vw, 520px);
+  max-height: 84vh;
+  margin: auto;
+  background: var(--cream);
+  color: var(--ink);
+  border: 1px solid rgba(28, 23, 20, 0.2);
+  border-radius: 14px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.50);
+  padding: 0;
+  overflow: hidden;
+}
+
+.legal-dialog::backdrop {
+  background: rgba(15, 10, 8, 0.72);
+  backdrop-filter: blur(4px);
+}
+
+.dialog-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 18px;
+  background: var(--dark);
+  color: var(--cream);
+}
+
+.dialog-head h2 {
+  font-size: 0.95rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.dialog-close-btn {
+  background: transparent;
+  border: none;
+  color: var(--cream);
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 4px 8px;
+  opacity: 0.8;
+}
+
+.dialog-close-btn:hover {
+  opacity: 1;
+  color: var(--gold);
+}
+
+.dialog-body {
+  padding: 18px;
+  overflow-y: auto;
+  max-height: calc(84vh - 120px);
+  font-size: 0.83rem;
+  line-height: 1.55;
+  color: var(--ink);
+  text-align: left;
+}
+
+.dialog-body h3 {
+  font-size: 0.88rem;
+  font-weight: 800;
+  color: var(--red-deep);
+  margin: 14px 0 4px;
+}
+
+.dialog-body h3:first-child {
+  margin-top: 0;
+}
+
+.dialog-body p,
+.dialog-body ul {
+  margin-bottom: 10px;
+  color: #4A4039;
+}
+
+.dialog-body ul {
+  padding-left: 18px;
+}
+
+.dialog-foot {
+  padding: 12px 18px;
+  background: #F3EAE0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.dialog-ok-btn {
+  background: var(--red);
+  color: #FFFFFF;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* Banner LGPD */
+.blink-cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(20, 18, 16, 0.96);
+  backdrop-filter: blur(10px);
+  color: var(--cream);
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  padding: 14px 16px;
+  z-index: 90;
+}
+
+.blink-cookie-banner[hidden] {
+  display: none !important;
+}
+
+.cookie-inner {
+  max-width: 440px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.blink-cookie-banner p {
+  font-size: 0.74rem;
+  line-height: 1.4;
+  color: rgba(251, 246, 238, 0.88);
+}
+
+.cookie-actions-row {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.btn-cookie-min {
+  background: transparent;
+  color: var(--cream);
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+.btn-cookie-ok {
+  background: var(--red);
+  color: #FFFFFF;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 14px;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

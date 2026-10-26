@@ -2,6 +2,14 @@
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "cleanUrls": true,
+  "rewrites": [
+    { "source": "/blinkgleba", "destination": "/blinkgleba/index.html" },
+    { "source": "/blinkgleba/", "destination": "/blinkgleba/index.html" },
+    { "source": "/blinkcentro", "destination": "/blinkcentro/index.html" },
+    { "source": "/blinkcentro/", "destination": "/blinkcentro/index.html" },
+    { "source": "/blinkmaringa", "destination": "/blinkmaringa/index.html" },
+    { "source": "/blinkmaringa/", "destination": "/blinkmaringa/index.html" }
+  ],
   "headers": [
     {
       "source": "/(.*)",

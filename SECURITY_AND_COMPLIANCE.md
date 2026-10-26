@@ -32,3 +32,11 @@ Este documento descreve os protocolos de segurança da informação, proteção 
   - `X-Frame-Options: SAMEORIGIN`
   - `Referrer-Policy: strict-origin-when-cross-origin`
   - `Permissions-Policy: camera=(), microphone=(), geolocation=()`
+
+---
+
+## 4. Rotas BLINK (Link-in-Bio Oficial por Unidade)
+- **`/blinkgleba`** (`https://domburiya.com.br/blinkgleba`): Unidade Gleba Palhano (Rua João Wyclif, 500 · Galeria Alameda Jardino, Loja 4, Londrina/PR · Tel/WhatsApp: `(43) 3326-6373`).
+- **`/blinkcentro`** (`https://domburiya.com.br/blinkcentro`): Unidade Centro (Rua Pernambuco, 682 · Centro, Londrina/PR · Tel/WhatsApp: `(43) 3027-4353`).
+- **`/blinkmaringa`** (`https://domburiya.com.br/blinkmaringa`): Unidade Maringá (Av. Pedro Taques, 947 · Zona 07, Maringá/PR · Instagram: `@domburiyamaringa`).
+- Todas as páginas BLINK contam com modais nativos acessíveis (`<dialog>`) de **Política de Privacidade (LGPD)** e **Termos de Uso**, banner de consentimento de cookies (`domburiya_blink_lgpd_v1`), cabeçalhos de segurança e links externos protegidos com `rel="noopener noreferrer"`.
