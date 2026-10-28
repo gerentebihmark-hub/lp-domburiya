@@ -93,11 +93,161 @@
     <div class="blink-section-divider" aria-hidden="true">
       <span>Links Oficiais</span>
       <div class="divider-line"></div>
-      <span>01</span>
+      <span>07</span>
     </div>
 
-    <!-- LISTA DE BOTÕES COM SÍMBOLOS OFICIAIS (Apenas os ativos para Maringá) -->
+    <!-- LISTA DE BOTÕES COM SÍMBOLOS OFICIAIS (Estrutura completa pronta para Maringá) -->
     <nav class="blink-links-stack" aria-label="Canais oficiais Domburiya Maringá">
+
+      <!-- 1. APP PRÓPRIO / PEDIDO DIRETO (Vermelho em 1º lugar) -->
+      <a
+        href="#"
+        onclick="return false;"
+        class="blink-btn btn-site-db"
+        aria-label="Peça pelo Nosso App"
+      >
+        <span class="btn-symbol" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+            <path d="M12 18h.01"></path>
+            <path d="M9 10l2 2 4-4"></path>
+          </svg>
+        </span>
+        <span class="btn-copy">
+          <span class="btn-title">Peça pelo Nosso App</span>
+          <span class="btn-sub">Faça seu pedido direto no app oficial</span>
+        </span>
+        <span class="btn-arrow" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7 17L17 7"></path>
+            <path d="M7 7h10v10"></path>
+          </svg>
+        </span>
+      </a>
+
+      <!-- 2. SITE OFICIAL (Símbolo Oficial da DB + Vermelho Deles) -->
+      <a
+        href="#"
+        onclick="return false;"
+        class="blink-btn btn-site-db"
+        aria-label="Acesse Nosso Site Oficial"
+      >
+        <span class="btn-symbol" aria-hidden="true">
+          <img src="/assets/brand/simbolo-db.webp" alt="" width="26" height="26" />
+        </span>
+        <span class="btn-copy">
+          <span class="btn-title">Acesse Nosso Site</span>
+          <span class="btn-sub">Conheça mais sobre a empresa</span>
+        </span>
+        <span class="btn-arrow" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7 17L17 7"></path>
+            <path d="M7 7h10v10"></path>
+          </svg>
+        </span>
+      </a>
+
+      <!-- 3. IFOOD (Símbolo Oficial iFood com Olho que Pisca no Hover na Web e ao Abrir no Celular) -->
+      <a
+        href="#"
+        onclick="return false;"
+        class="blink-btn btn-ifood"
+        aria-label="Peça pelo iFood"
+      >
+        <span class="btn-symbol" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor" class="ifood-official-svg">
+            <path d="M8.428 1.67c-4.65 0-7.184 4.149-7.184 6.998 0 2.294 2.2 3.299 4.25 3.299l-.006-.006c4.244 0 7.184-3.854 7.184-6.998 0-2.29-2.175-3.293-4.244-3.293z" />
+            <g class="ifood-wink-eye">
+              <path d="M19.756 1.67c-4.65 0-7.184 4.149-7.184 6.998 0 2.294 2.2 3.299 4.25 3.299l-.006-.006C21.061 11.96 24 8.107 24 4.963c0-2.29-2.18-3.293-4.244-3.293z" />
+            </g>
+            <path d="M14.172 14.52l2.435 1.834c-2.17 2.07-6.124 3.525-9.353 3.17A8.913 8.913 0 01.23 14.541H0a9.598 9.598 0 008.828 7.758c3.814.24 7.323-.905 9.947-3.13l-.004.007 1.08 2.988 1.555-7.623-7.234-.02Z" />
+          </svg>
+        </span>
+        <span class="btn-copy">
+          <span class="btn-title">Peça pelo iFood</span>
+          <span class="btn-sub">Peça agora e receba quentinho em casa</span>
+        </span>
+        <span class="btn-arrow" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7 17L17 7"></path>
+            <path d="M7 7h10v10"></path>
+          </svg>
+        </span>
+      </a>
+
+      <!-- 4A. WHATSAPP OFICIAL -->
+      <a
+        href="#"
+        onclick="return false;"
+        class="blink-btn"
+        aria-label="Fale pelo WhatsApp"
+      >
+        <span class="btn-symbol" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12.01 2.002C6.488 2.002 2 6.49 2 12.012c0 1.765.46 3.49 1.334 5.006L2 22l5.127-1.344a9.96 9.96 0 004.883 1.272c5.523 0 10.011-4.488 10.011-10.01C22.021 6.49 17.533 2.002 12.01 2.002z" fill="#25D366" />
+            <path d="M17.51 14.39c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51-.17-.01-.37-.01-.57-.01-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.2 2.1 3.2 5.09 4.49.71.31 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.42.25-.7.25-1.29.17-1.42-.07-.12-.27-.2-.57-.35z" fill="#FFFFFF" />
+          </svg>
+        </span>
+        <span class="btn-copy">
+          <span class="btn-title">Fale pelo WhatsApp</span>
+          <span class="btn-sub">Contato rápido e direto</span>
+        </span>
+        <span class="btn-arrow" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7 17L17 7"></path>
+            <path d="M7 7h10v10"></path>
+          </svg>
+        </span>
+      </a>
+
+      <!-- 4B. TELEFONE FIXO -->
+      <a
+        href="#"
+        onclick="return false;"
+        class="blink-btn"
+        aria-label="Telefone Fixo"
+      >
+        <span class="btn-symbol" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+          </svg>
+        </span>
+        <span class="btn-copy">
+          <span class="btn-title">Telefone Fixo</span>
+          <span class="btn-sub">Entre em contato por ligação</span>
+        </span>
+        <span class="btn-arrow" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7 17L17 7"></path>
+            <path d="M7 7h10v10"></path>
+          </svg>
+        </span>
+      </a>
+
+      <!-- 5. FACEBOOK OFICIAL -->
+      <a
+        href="#"
+        onclick="return false;"
+        class="blink-btn"
+        aria-label="Facebook Domburiya"
+      >
+        <span class="btn-symbol" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M24 12c0-6.627-5.373-12-12-12S0 5.373 0 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 22.954 24 17.99 24 12z" fill="#1877F2"/>
+            <path d="M16.671 15.469l.532-3.47h-3.328v-2.25c0-.949.465-1.874 1.956-1.874h1.513V4.922s-1.374-.235-2.686-.235c-2.741 0-4.533 1.662-4.533 4.669v2.642H7.078v3.47h3.047v8.385a12.09 12.09 0 003.75 0v-8.385h2.796z" fill="#FFFFFF"/>
+          </svg>
+        </span>
+        <span class="btn-copy">
+          <span class="btn-title">Curta no Facebook</span>
+          <span class="btn-sub">Domburiya • Página oficial</span>
+        </span>
+        <span class="btn-arrow" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7 17L17 7"></path>
+            <path d="M7 7h10v10"></path>
+          </svg>
+        </span>
+      </a>
 
       <!-- 6. AVALIAÇÕES DO GOOGLE -->
       <a
