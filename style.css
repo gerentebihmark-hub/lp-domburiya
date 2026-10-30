@@ -882,9 +882,82 @@ button {
 .dish-meta p {
   font-size: 0.75rem;
   color: var(--ink-muted);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  line-height: 1.45;
+}
+
+/* ==========================================================================
+   SEÇÃO 2B: COMBINADO FAMÍLIA
+   ========================================================================== */
+.section-combinado-familia {
+  padding: 2.5rem 0 1.5rem;
+  background-color: var(--cream);
+}
+
+.combinado-header {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 1.75rem;
+}
+
+.combinado-kicker {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--red);
+  background: rgba(214, 35, 35, 0.08);
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-xs);
+  margin-bottom: 0.5rem;
+}
+
+.combinado-header p {
+  font-size: 0.95rem;
+  color: var(--ink-muted);
+  margin-top: 0.45rem;
+}
+
+.combinado-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.combinado-card .dish-row h3 {
+  font-size: 1.02rem;
+  line-height: 1.3;
+}
+
+.footer-bottom-right {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.footer-bmk-logo {
+  display: inline-flex;
+  align-items: center;
+  opacity: 0.92;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.footer-bmk-logo:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+.footer-bmk-logo img {
+  height: 26px;
+  width: auto;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .combinado-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ==========================================================================

@@ -10,60 +10,60 @@
 'use strict';
 
 /* ==========================================================================
-   1. DIAGRAMA INTERATIVO "ANATOMIA DO BOWL" (Estilo Nutella)
+   1. DIAGRAMA INTERATIVO "ANATOMIA DOS DESTAQUES"
    ========================================================================== */
 const ANATOMY_DATA = {
   lamen: {
-    img: '/assets/ambiente/bowl-lamen-cutout.webp',
+    img: '/assets/ambiente/bowl-lamen-cutout.webp?v=3',
     isCutout: true,
     price: 'R$ 54,00',
-    c1Title: 'Caldo de Longa Cocção',
-    c1Desc: 'Base intensa de missô, shoyu, shio ou gergelim picante fervida lentamente.',
-    c2Title: 'Chashu Maçaricado',
-    c2Desc: 'Fatias macias de lombo suíno marinadas no tare da casa.',
-    c3Title: 'Massa Artesanal',
-    c3Desc: 'Macarrão alcalino firme que absorve o caldo até o fim.',
-    c4Title: 'Toppings Clássicos',
-    c4Desc: 'Ovo cozido, manteiga no milho doce, naruto, nori e cebolinha fresca.'
+    c1Title: 'Caldo Tonkotsu & Missô',
+    c1Desc: 'Caldo tonkotsu encorpado com pasta de soja (missô) e toque de óleo aromático ma-yu.',
+    c2Title: 'Carne Suína & Ovo Marinado',
+    c2Desc: 'Fatias suculentas de carne suína acompanhadas de ovo cozido marinado no shoyu.',
+    c3Title: 'Macarrão Artesanal',
+    c3Desc: 'Macarrão artesanal de lámen que absorve o caldo quente até o fim.',
+    c4Title: 'Naruto, Nori & Cebolinha',
+    c4Desc: 'Finalizado com repolho, naruto, alga nori crocante e cebolinha fresca.'
   },
   kare: {
     img: '/assets/ambiente/bowl-kare-cutout.webp',
     isCutout: true,
-    price: 'Normal R$ 69 · Mini R$ 59',
-    c1Title: 'Curry Japonês Denso',
-    c1Desc: 'Molho aveludado cozido com especiarias japonesas, carne e legumes.',
-    c2Title: 'Empanado em Panko',
-    c2Desc: 'Lombo suíno (Katsu), frango ou filé bovino frito na hora, ultra crocante.',
-    c3Title: 'Gohan no Ponto',
-    c3Desc: 'Arroz japonês úmido e quentinho para envolver todo o molho.',
-    c4Title: 'Dois Tamanhos',
-    c4Desc: 'Disponível nas versões Normal ou Mini para o tamanho da sua fome.'
+    price: 'Individual R$ 59,00 · Combo R$ 69,00',
+    c1Title: 'Curry Japonês Picante',
+    c1Desc: 'Molho karê espesso, aromático e picante, cozido lentamente com especiarias japonesas.',
+    c2Title: 'Empanado Suíno (Tonkatsu)',
+    c2Desc: 'Lombo suíno empanado em farinha panko crocante e frito na hora.',
+    c3Title: 'Arroz Oriental (Gohan)',
+    c3Desc: 'Arroz japonês cozido no vapor no ponto ideal para envolver o molho karê.',
+    c4Title: 'Individual ou Combo',
+    c4Desc: 'Disponível nas versões Individual (R$ 59,00) ou Combo (R$ 69,00).'
   },
   donburi: {
     img: '/assets/ambiente/bowl-katsudon-cutout.webp',
     isCutout: true,
-    price: 'Normal R$ 53 · Mini R$ 43',
-    c1Title: 'Alma do Domburiya',
-    c1Desc: 'A tigela japonesa clássica que deu nome ao primeiro restaurante da Hachimitsu.',
-    c2Title: 'Ovo & Tare Artesanal',
-    c2Desc: 'Cozido rapidamente com cebola e molho dashi-shoyu levemente adocicado.',
-    c3Title: 'Proteína Suculenta',
-    c3Desc: 'Escolha entre Katsudon, Gyudon, Cheese Gyudon, Gyutamagodon ou Tonkatsudon.',
-    c4Title: 'Finalização Fresca',
-    c4Desc: 'Cebolinha verde, gengibre beni shoga e gergelim tostado.'
+    price: 'Individual R$ 43,00 · Combo R$ 53,00',
+    c1Title: 'Clássico Domburi Japonês',
+    c1Desc: 'Arroz oriental servido em tigela com empanado suíno cozido no molho da casa.',
+    c2Title: 'Molho Shoyu, Cebola & Ovos',
+    c2Desc: 'Cozido rapidamente com cebolas macias, ovos e molho à base de shoyu.',
+    c3Title: 'Empanado Suíno Suculento',
+    c3Desc: 'Lombo suíno empanado frito que absorve o caldo quente mantendo a suculência.',
+    c4Title: 'Individual ou Combo',
+    c4Desc: 'Disponível nas versões Individual (R$ 43,00) ou Combo (R$ 53,00).'
   },
   obento: {
-    img: '/assets/ambiente/bowl-obento-cutout.webp',
+    img: '/assets/ambiente/bowl-obento-cutout.webp?v=3',
     isCutout: true,
-    price: 'R$ 42,00 a R$ 52,00',
-    c1Title: 'Refeição Completa',
-    c1Desc: 'Bandeja japonesa dividida com equilíbrio entre proteína, massa e arroz.',
-    c2Title: 'Yakisoba no Wok',
-    c2Desc: 'Macarrão salteado na chapa com legumes frescos e molho escuro da casa.',
-    c3Title: 'Proteína Dupla ou Karague',
-    c3Desc: 'Opções com Gyu + Katsu (R$ 52), Katsu (R$ 46) ou Karague (R$ 42).',
-    c4Title: 'Salada & Gohan',
-    c4Desc: 'Acompanha arroz japonês no vapor, salada cítrica e batata.'
+    price: 'A partir de R$ 42,00',
+    c1Title: 'Gohan com Furikake & Umeboshi',
+    c1Desc: 'Arroz oriental temperado com furikake e ameixa em conserva no centro.',
+    c2Title: 'Yakissoba com Legumes',
+    c2Desc: 'Macarrão yakissoba salteado na chapa com legumes selecionados e molho da casa.',
+    c3Title: 'Proteína à Escolha',
+    c3Desc: 'Opções com Frango Karaguê, Empanado Suíno (Katsu), Bovino (Gyu), Guioza ou Salmão.',
+    c4Title: 'Omelete Japonês',
+    c4Desc: 'Fatias de omelete japonês macio acompanhadas de gengibre beni shoga.'
   }
 };
 
@@ -109,21 +109,21 @@ function initAnatomySwitcher() {
 }
 
 /* ==========================================================================
-   2. FILTRO VISUAL DO CARDÁPIO BENTO (24 PRATOS)
+   2. FILTRO VISUAL DO CARDÁPIO BENTO
    ========================================================================== */
 const CATEGORY_LABELS = {
-  lamen: 'Exibindo: Lámen (5 pratos)',
-  kare: 'Exibindo: Karê — Curry Japonês (5 pratos)',
-  donburi: 'Exibindo: Donburi — Tigelas de Gohan (5 pratos)',
-  obento: 'Exibindo: Obentô Executivo (3 pratos)',
-  entradas: 'Exibindo: Porções & Entradas (6 pratos)',
-  todos: 'Exibindo: Cardápio Completo (24 pratos)'
+  lamen: 'Exibindo: Lámen (09 caldos no cardápio · R$ 49,00 a R$ 54,00)',
+  domburi: 'Exibindo: Domburi & Karê (21 tigelas · Individual ou Combo)',
+  obento: 'Exibindo: Obentô Executivo',
+  combinado: 'Exibindo: Combinado Família (Yakimeshi + Yakissoba + Proteína)',
+  entradas: 'Exibindo: Porções & Entradas',
+  todos: 'Exibindo: Alguns de Nossos Pratos em Destaque'
 };
 
 function initBentoMenuFilter() {
   const catTiles = document.querySelectorAll('.cat-tile');
   const showAllBtn = document.querySelector('.btn-show-all');
-  const dishes = document.querySelectorAll('.dish-tile');
+  const dishes = document.querySelectorAll('#menu-grid .dish-tile');
   const activeLabel = document.getElementById('menu-active-label');
 
   if (!dishes.length) return;
@@ -168,12 +168,12 @@ const REVIEWS = [
     author: 'Lucas D. · Alameda Jardino'
   },
   {
-    img: '/assets/pratos/obento-gyu-katsu.webp',
+    img: '/assets/pratos/obento-karague.webp?v=3',
     quote: '“Os pratos estavam muito bem preparados e o tempero é bem suave. O atendimento também foi ótimo!”',
     author: 'Natália · Londrina/PR'
   },
   {
-    img: '/assets/pratos/karague-sweet-chili.webp',
+    img: '/assets/pratos/misso-lamen.webp?v=3',
     quote: '“Foi muito bom desde o atendimento via WhatsApp até pessoalmente. Tudo que experimentamos estava muito saboroso!”',
     author: 'Laisa Pizzo · Londrina/PR'
   }
