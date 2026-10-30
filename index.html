@@ -20,7 +20,7 @@
   <meta property="og:image" content="https://domburiya.com.br/og-image.jpg" />
 
   <!-- Preload Principal Cutout Bowl -->
-  <link rel="preload" as="image" href="/assets/ambiente/bowl-lamen-cutout.webp?v=4" type="image/webp" fetchpriority="high" />
+  <link rel="preload" as="image" href="/assets/ambiente/bowl-kare-cutout.webp" type="image/webp" fetchpriority="high" />
 
   <!-- Google Fonts: Montserrat (400..900 + Itálicos) + Shantell Sans & Caveat (Rabisco Legível) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -116,8 +116,8 @@
         <!-- Coluna Visual: Polaroids Inclinadas + Bowl Recortado Flutuante -->
         <div class="hero-visual-collage">
           <div class="polaroid-card polaroid-left">
-            <img src="/assets/pratos/katsu-kare.webp" alt="Katsu Karê Domburiya" width="380" height="260" />
-            <span class="polaroid-caption">Katsu Karê · Ind. R$ 59</span>
+            <img src="/assets/pratos/misso-lamen.webp?v=5" alt="Missô Lámen Domburiya" width="380" height="260" />
+            <span class="polaroid-caption">Missô Lámen · R$ 54</span>
           </div>
 
           <div class="polaroid-card polaroid-right">
@@ -127,8 +127,8 @@
 
           <figure class="floating-bowl-wrap">
             <img
-              src="/assets/ambiente/bowl-lamen-cutout.webp?v=4"
-              alt="Missô Lámen Domburiya"
+              src="/assets/ambiente/bowl-kare-cutout.webp"
+              alt="Katsu Karê Domburiya"
               width="676"
               height="510"
               fetchpriority="high"
@@ -136,8 +136,8 @@
               class="floating-bowl-img"
             />
             <div class="bowl-price-stamp">
-              <strong>MISSÔ LÁMEN</strong>
-              <span>R$ 54,00</span>
+              <strong>KATSU KARÊ</strong>
+              <span>R$ 59,00</span>
             </div>
           </figure>
         </div>
@@ -180,10 +180,7 @@
           <h2 class="section-display-red">UMA RECEITA DIRETA, FEITA COM ALMA</h2>
           <!-- Seletor Interativo de Prato no Diagrama -->
           <div class="anatomy-switcher" role="tablist" aria-label="Escolha o prato para ver os ingredientes">
-            <button type="button" class="anatomy-btn is-active" role="tab" aria-selected="true" data-anatomy="lamen">
-              Missô Lámen
-            </button>
-            <button type="button" class="anatomy-btn" role="tab" aria-selected="false" data-anatomy="kare">
+            <button type="button" class="anatomy-btn is-active" role="tab" aria-selected="true" data-anatomy="kare">
               Katsu Karê
             </button>
             <button type="button" class="anatomy-btn" role="tab" aria-selected="false" data-anatomy="donburi">
@@ -192,6 +189,9 @@
             <button type="button" class="anatomy-btn" role="tab" aria-selected="false" data-anatomy="obento">
               Obentô Executivo
             </button>
+            <button type="button" class="anatomy-btn" role="tab" aria-selected="false" data-anatomy="lamen">
+              Missô Lámen
+            </button>
           </div>
         </header>
 
@@ -199,11 +199,11 @@
         <div class="anatomy-stage">
           <!-- Callout 1: Topo Esquerda -->
           <div class="callout-sketch callout-tl">
-            <strong id="callout-1-title">Caldo Tonkotsu &amp; Missô</strong>
+            <strong id="callout-1-title">Curry Japonês Picante</strong>
             <svg class="scribble-underline" viewBox="0 0 180 12" fill="none" aria-hidden="true">
               <path d="M3,8 C52,2 118,11 177,4 M18,10 C74,6 132,9 168,7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
             </svg>
-            <p id="callout-1-desc">Caldo tonkotsu encorpado com pasta de soja (missô) e toque de óleo aromático ma-yu.</p>
+            <p id="callout-1-desc">Molho karê espesso, aromático e picante, cozido lentamente com especiarias japonesas.</p>
             <svg class="callout-arrow arrow-tl" viewBox="0 0 120 64" fill="none" aria-hidden="true">
               <path d="M8,10 C42,6 68,18 56,32 C44,44 78,48 110,54 M110,54 L93,44 M110,54 L96,61" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
@@ -211,11 +211,11 @@
 
           <!-- Callout 2: Topo Direita -->
           <div class="callout-sketch callout-tr">
-            <strong id="callout-2-title">Carne Suína &amp; Ovo Marinado</strong>
+            <strong id="callout-2-title">Empanado Suíno (Tonkatsu)</strong>
             <svg class="scribble-underline" viewBox="0 0 180 12" fill="none" aria-hidden="true">
               <path d="M3,6 C64,11 124,2 176,8 M14,9 C68,5 128,10 165,6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
             </svg>
-            <p id="callout-2-desc">Fatias suculentas de carne suína acompanhadas de ovo cozido marinado no shoyu.</p>
+            <p id="callout-2-desc">Lombo suíno empanado em farinha panko crocante e frito na hora.</p>
             <svg class="callout-arrow arrow-tr" viewBox="0 0 120 64" fill="none" aria-hidden="true">
               <path d="M112,10 C78,6 52,18 64,32 C76,44 42,48 10,54 M10,54 L27,44 M10,54 L24,61" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
@@ -225,7 +225,7 @@
           <div class="anatomy-centerpiece">
             <div class="anatomy-plate-ring">
               <img
-                src="/assets/ambiente/bowl-lamen-cutout.webp?v=4"
+                src="/assets/ambiente/bowl-kare-cutout.webp"
                 alt="Detalhe do prato Domburiya"
                 width="520"
                 height="520"
@@ -233,7 +233,7 @@
                 class="anatomy-img is-cutout"
               />
             </div>
-            <div class="anatomy-price-tag" id="anatomy-price-tag">R$ 54,00</div>
+            <div class="anatomy-price-tag" id="anatomy-price-tag">Individual R$ 59,00 · Combo R$ 69,00</div>
           </div>
 
           <!-- Callout 3: Base Esquerda -->
@@ -241,11 +241,11 @@
             <svg class="callout-arrow arrow-bl" viewBox="0 0 120 64" fill="none" aria-hidden="true">
               <path d="M8,54 C42,58 68,46 56,32 C44,20 78,16 110,10 M110,10 L93,20 M110,10 L96,3" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
-            <strong id="callout-3-title">Macarrão Artesanal</strong>
+            <strong id="callout-3-title">Arroz Oriental (Gohan)</strong>
             <svg class="scribble-underline" viewBox="0 0 180 12" fill="none" aria-hidden="true">
               <path d="M4,7 C58,11 118,3 175,8 M20,10 C75,6 130,9 162,6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
             </svg>
-            <p id="callout-3-desc">Macarrão artesanal de lámen que absorve o caldo quente até o fim.</p>
+            <p id="callout-3-desc">Arroz japonês cozido no vapor no ponto ideal para envolver o molho karê.</p>
           </div>
 
           <!-- Callout 4: Base Direita -->
@@ -253,11 +253,11 @@
             <svg class="callout-arrow arrow-br" viewBox="0 0 120 64" fill="none" aria-hidden="true">
               <path d="M112,54 C78,58 52,46 64,32 C76,20 42,16 10,10 M10,10 L27,20 M10,10 L24,3" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
-            <strong id="callout-4-title">Naruto, Nori &amp; Cebolinha</strong>
+            <strong id="callout-4-title">Individual ou Combo</strong>
             <svg class="scribble-underline" viewBox="0 0 180 12" fill="none" aria-hidden="true">
               <path d="M5,8 C62,2 122,11 176,5 M16,10 C72,7 128,9 168,7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
             </svg>
-            <p id="callout-4-desc">Finalizado com repolho, naruto, alga nori crocante e cebolinha fresca.</p>
+            <p id="callout-4-desc">Disponível nas versões Individual (R$ 59,00) ou Combo (R$ 69,00).</p>
           </div>
         </div>
       </div>
