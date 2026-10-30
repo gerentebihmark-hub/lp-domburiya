@@ -168,12 +168,12 @@ const REVIEWS = [
     author: 'Lucas D. · Alameda Jardino'
   },
   {
-    img: '/assets/pratos/obento-karague.webp?v=3',
+    img: '/assets/pratos/obento-karague.webp?v=6',
     quote: '“Os pratos estavam muito bem preparados e o tempero é bem suave. O atendimento também foi ótimo!”',
     author: 'Natália · Londrina/PR'
   },
   {
-    img: '/assets/pratos/misso-lamen.webp?v=3',
+    img: '/assets/pratos/misso-lamen.webp?v=6',
     quote: '“Foi muito bom desde o atendimento via WhatsApp até pessoalmente. Tudo que experimentamos estava muito saboroso!”',
     author: 'Laisa Pizzo · Londrina/PR'
   }
