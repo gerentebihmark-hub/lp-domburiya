@@ -14,7 +14,7 @@
    ========================================================================== */
 const ANATOMY_DATA = {
   lamen: {
-    img: '/assets/ambiente/bowl-lamen-cutout.webp?v=3',
+    img: '/assets/ambiente/bowl-lamen-cutout.webp?v=4',
     isCutout: true,
     price: 'R$ 54,00',
     c1Title: 'Caldo Tonkotsu & Missô',
